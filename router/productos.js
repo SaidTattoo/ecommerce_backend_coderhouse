@@ -1,6 +1,9 @@
 const { Router } = require('express');
-const { productoController, buscarPorIdController, eliminarController, editarController, guardarController } = require('../controller/producto');
+const { productoController, buscarPorIdController, eliminarController, editarController, guardarController, buscarController } = require('../controller/producto');
 const router = Router();
+
+
+router.get('/buscar',buscarController)
 
 router.get('/', productoController)
 

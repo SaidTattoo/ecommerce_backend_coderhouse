@@ -1,4 +1,4 @@
-const { getAll, getById, edit, deleteById, save } = require("../model/dao/producto")
+const { getAll, getById, edit, deleteById, save, search } = require("../model/dao/producto")
 
 const listarProductosService = async () => {
     return getAll()
@@ -16,10 +16,15 @@ const guardarService = (body) => {
     return save(body)
 }
 
+const buscarService = (params) => {
+    return search(params)
+}
+
 module.exports = {
     listarProductosService,
     buscarPorIdService,
     editarService,
     eliminarService,
-    guardarService
+    guardarService,
+    buscarService
 }

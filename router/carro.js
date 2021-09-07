@@ -4,6 +4,6 @@ const router = Router();
 
 router.get('/listar', listarCarroController)
 router.put('/agregar/:id', agregarCarroController )
-router.put('/eliminar/:id', eliminarCarroController)
+router.delete('/eliminar/:id', eliminarCarroController)
 
 module.exports = router

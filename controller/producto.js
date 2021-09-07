@@ -1,4 +1,4 @@
-const { listarProductosService, buscarPorIdService, editarService, eliminarService, guardarService } = require("../services/producto")
+const { listarProductosService, buscarPorIdService, editarService, eliminarService, guardarService, buscarService } = require("../services/producto")
 const { success, error } = require("../utils/networks")
 
 const productoController = async (req, res) => {
@@ -30,10 +30,17 @@ const guardarController = async (req, res) => {
     data ? success(req, res, data, 200) : error(req, res, "No se guardo el producto", 400)
 }
 
+const buscarController = async (req, res ) => {
+    const { nombre} = req.query
+    console.log(nombre)
+    await buscarService(nombre)
+}
+
 module.exports = {
     productoController,
     buscarPorIdController,
     editarController,
     eliminarController,
-    guardarController
+    guardarController, 
+    buscarController
 }

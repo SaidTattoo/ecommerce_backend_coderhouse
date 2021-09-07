@@ -1,21 +1,28 @@
 
 const producto = require("../model/producto")
 
+
+const search = async (params) => {
+    console.log('params', params)
+    let productosDB = await producto.find({producto:{ nombre: params }})
+    return productosDB
+}
+
 const getAll = async () => {
     let productosDB = await producto.find()
     return productosDB
 }
 
 const getById = async (id) => {
-    let productoDB = await  producto.findById(id)
+    let productoDB = await producto.findById(id)
     return productoDB
 }
 const edit = async (id, body) => {
     let productoEdit = await producto.findByIdAndUpdate(id, body)
     return productoEdit
-} 
+}
 
-const deleteById = async(id) => {
+const deleteById = async (id) => {
     let deleted = await producto.findByIdAndDelete(id)
     return deleted
 }
@@ -28,5 +35,6 @@ module.exports = {
     getById,
     edit,
     deleteById,
-    save
+    save,
+    search
 }

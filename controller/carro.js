@@ -11,7 +11,8 @@ const agregarCarroController = async (req, res) => {
     success(req, res, data, 200)
 }
 const eliminarCarroController = async (req, res) => {
-    let data = await eliminarCarroService()
+    const { id } = req.params
+    let data = await eliminarCarroService(id)
     success(req, res, data, 200)
 }
 
