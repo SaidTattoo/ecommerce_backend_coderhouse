@@ -17,5 +17,29 @@ TODO | DESCRIPTIONS | METHOD | ENDPOINT | BODY
 --- | --- |  --- | --- | ---
 :heavy_check_mark:| Lista los productos del carro de compras |*GET* | `http://localhost:8080/api/carro/listar` | void
 :heavy_check_mark: | Agrega un producto al carro de compras |*PUT* | `http://localhost:8080/api/carro/agregar/:id` | producto
-:heavy_check_mark: | Elimina un producto del carro de compras  |*DELETE* | `http://localhost:8080/api/carro/eliminar/:id` | idProducto
+:heavy_check_mark: | Elimina un producto del carro de compras  |*DELETE* | `http://localhost:8080/api/carro/eliminar/:id` | idProd
 
+
+
+#### Objeto producto
+
+```json 
+
+
+ {
+    "nombre": "Araña",
+    "precio": 1200,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Poison_Spider-256.png",
+    "descripcion": "",
+    "codigo": "CH-002",
+    "stock": 1,
+}
+```
+
+#### Objeto idProducto
+
+```json 
+{
+    "idProd": "6137b5c5be89683a902031f6"
+}
+```
