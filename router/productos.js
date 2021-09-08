@@ -7,7 +7,7 @@ router.get('/buscar',buscarController)
 
 router.get('/', productoController)
 
-router.get('/listar/:id', buscarPorIdController)
+router.get('/:id', buscarPorIdController)
 
 router.post('/guardar', guardarController)
 

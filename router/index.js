@@ -13,7 +13,6 @@ fs.readdirSync(pathRouter).filter((file) => {
     const skip = ["index"].includes(fileWithoutExtension)
     if (!skip) {
         router.use(`/${fileWithoutExtension}`, require(`./${fileWithoutExtension}`))
-        console.log(`http://localhost:8080/api/${fileWithoutExtension}`)
     }
 })
 

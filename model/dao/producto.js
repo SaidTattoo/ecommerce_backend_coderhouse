@@ -3,7 +3,6 @@ const producto = require("../model/producto")
 
 
 const search = async (params) => {
-    console.log('params', params)
     let productosDB = await producto.find({producto:{ nombre: params }})
     return productosDB
 }

@@ -10,8 +10,8 @@ const agregarCarroService = (id, prod) => {
     return addToCar(id, prod)
 }
 
-const eliminarCarroService = (id) => {
-    return removeToCar(id)
+const eliminarCarroService = (id, idProd) => {
+    return removeToCar(id, idProd)
 }
 
 module.exports = {

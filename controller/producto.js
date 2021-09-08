@@ -32,7 +32,6 @@ const guardarController = async (req, res) => {
 
 const buscarController = async (req, res ) => {
     const { nombre} = req.query
-    console.log(nombre)
     await buscarService(nombre)
 }
 
