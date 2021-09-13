@@ -2,12 +2,19 @@
 const producto = require("../model/producto")
 
 
-const search = async (params) => {
-    let productosDB = await producto.find({producto:{ nombre: params }})
+const search = async (key, nombre) => {
+    console.log(key, nombre)
+    let productosDB = await producto.find()
     return productosDB
 }
 
-const getAll = async () => {
+const getAll = async (key ="", nombre="") => {
+    
+    if(key || nombre){
+        let productosDB = await producto.find()
+        let prodFilter = productosDB.filter((e) => e[key] == nombre ) 
+        return prodFilter 
+    }
     let productosDB = await producto.find()
     return productosDB
 }

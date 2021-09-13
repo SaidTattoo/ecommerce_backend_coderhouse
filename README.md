@@ -9,7 +9,7 @@ TODO | DESCRIPTIONS | METHOD | ENDPOINT | BODY
 :heavy_check_mark: | Edita un producto |*PUT* | `http://localhost:8080/api/productos/editar/:id` |  producto 
 :heavy_check_mark: | Guarda on producto |*POST* | `http://localhost:8080/api/productos/guardar` |  producto 
 :heavy_check_mark: | Elimina el producto segun el id |*DELETE* | `http://localhost:8080/api/productos/eliminar/:id` | void
-:heavy_check_mark: | Busca un producto por el nombre |*GET* | `http://localhost:8080/api/productos/buscar?nombre=params` | void
+:heavy_check_mark: | Busca un producto por el nombre |*GET* | `http://localhost:8080/api/productos/buscar?key=llave&nombre=params` | void
 
 ## Carro de compras API
 

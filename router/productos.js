@@ -3,7 +3,7 @@ const { productoController, buscarPorIdController, eliminarController, editarCon
 const router = Router();
 
 
-router.get('/buscar',buscarController)
+router.get('/buscar',productoController)
 
 router.get('/', productoController)
 

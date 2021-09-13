@@ -2,7 +2,8 @@ const { listarProductosService, buscarPorIdService, editarService, eliminarServi
 const { success, error } = require("../utils/networks")
 
 const productoController = async (req, res) => {
-    let data = await listarProductosService()
+    const { key, nombre} = req.query
+    let data = await listarProductosService( key, nombre)
     data ? success(req, res, data, 200) : error(req, res, "No existen productos", 400)
 }
 
@@ -31,8 +32,8 @@ const guardarController = async (req, res) => {
 }
 
 const buscarController = async (req, res ) => {
-    const { nombre} = req.query
-    await buscarService(nombre)
+    const { key, nombre} = req.query
+    await buscarService(key, nombre)
 }
 
 module.exports = {
